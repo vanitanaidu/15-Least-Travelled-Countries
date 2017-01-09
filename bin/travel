@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
-require_relative '../lib/least_travel'
+require_relative '../config/environment'
 puts "Hello World!"
