@@ -37,15 +37,15 @@ class Scraper
   end
 
   def scrape_country_names
-    # (you are gonna get the name of all the name of the least travelled countries; include numbers it's ok)
+    #  names of the least travelled countries; include numbers)
     self.get_page.css("h3").css(".slide-title")
   end
 
-  def make_countries
+  def create_countries
     scrape_country_names.each do |country_names|
-      # 'r' stands for each of the names in the 'scrape-index-method'
-    #  binding.pry
-      Least_travelled.new_from_index_page(r)
+      # country_names =  names of countries ('scrape_country_names')
+      # binding.pry
+      LeastTravelled.new_from_index_page(country_names)
       #the programmer is now using a method from the the restaurant.rb file and assigning 'r' (each of the names)
 
     end
@@ -56,4 +56,4 @@ scraper = Scraper.new
 scraper.scrape_country_names
 
 scraper = Scraper.new
-scraper.make_restaurants
+scraper.create_countries
