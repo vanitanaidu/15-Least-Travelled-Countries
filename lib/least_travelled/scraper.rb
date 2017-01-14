@@ -1,3 +1,4 @@
+require_relative '../lib/least_travelled'
 
 class Scraper
 
