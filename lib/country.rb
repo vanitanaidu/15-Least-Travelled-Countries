@@ -2,12 +2,13 @@ require 'pry'
 
 class Country
 
-  attr_accessor :name, :position, :location, :url, :head_chef, :website_url, :food_style, :best_dish, :contact, :description
+  attr_accessor :name, :info
 
   @@all = []
 
   def self.new_from_index_page(country_names)
     # r is each name in the scraper class
+    binding.pry
     self.new(
       r.css("h2").text, #name of the chief
       "http://www.theworlds50best.com#{r.css("a").attribute("href").text}", #website of the chef
@@ -16,13 +17,11 @@ class Country
       )
   end
 
-  def initialize(name=nil, url=nil, location=nil, position=nil)
+  def initialize(name=nil, information=nil)
     @name = name
-    @url = url
-    @location = location
-    @position = position
+    @info = info
     @@all << self
-    # when an instance of restaurant is created every one of this instances will have a name, url, location & position
+    # when an instance of country is created every one of this instances will have a name & info
     # and all these attributes will be pushed into @@all the class variable.
   end
 
@@ -35,39 +34,37 @@ class Country
     self.all[id-1]
   end
 
-  def best_dish
-    @best_dish ||= doc.xpath("//div[@class='c-4 nr nt']/ul[3]/li").text
-  end
-
-  def food_style
-    @food_style ||= doc.xpath("//div[@class='c-4 nr nt']/ul[2]/li").text
-  end
-
-  def contact
-    @contact ||= doc.xpath("//div[@class='c-4 nr nt']/ul[4]/li[1]").text.split("+").join(". Tel: +")
-  end
-
-  def head_chef
-    @head_chef ||= doc.xpath("//div[@class='c-4 nr nt']/ul[1]/li").text.split(" (pictured)").join("")
-  end
-
-  def website_url
-    @website_url ||= doc.xpath("//div[@class='c-4 nr nt']/ul[4]/li[2]/a").text
-  end
-
-  def description
-    @description ||= doc.xpath("//div[@class='c-8 nl nt']/p[3]").text
-  end
-
-  def doc
-    @doc ||= Nokogiri::HTML(open(self.url))
-  end
+  # def best_dish
+  #   @best_dish ||= doc.xpath("//div[@class='c-4 nr nt']/ul[3]/li").text
+  # end
+  #
+  # def food_style
+  #   @food_style ||= doc.xpath("//div[@class='c-4 nr nt']/ul[2]/li").text
+  # end
+  #
+  # def contact
+  #   @contact ||= doc.xpath("//div[@class='c-4 nr nt']/ul[4]/li[1]").text.split("+").join(". Tel: +")
+  # end
+  #
+  # def head_chef
+  #   @head_chef ||= doc.xpath("//div[@class='c-4 nr nt']/ul[1]/li").text.split(" (pictured)").join("")
+  # end
+  #
+  # def website_url
+  #   @website_url ||= doc.xpath("//div[@class='c-4 nr nt']/ul[4]/li[2]/a").text
+  # end
+  #
+  # def description
+  #   @description ||= doc.xpath("//div[@class='c-8 nl nt']/p[3]").text
+  # end
+  #
+  # def doc
+  #   @doc ||= Nokogiri::HTML(open(self.url))
+  # end
 end
 
 
-travel = LeastTravelled.new
-LeastTravelled.all
-LeastTravelled.find(2)
-travel.best_dishes
-travel.food_style
-travel.contact
+country = Country.new
+Country.new_from_index_page(country_names)
+Country.all
+Country.find(2)

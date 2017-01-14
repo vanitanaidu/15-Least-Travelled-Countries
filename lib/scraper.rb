@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
+require_relative "../lib/country.rb"
 
 # class Scraper
 #
@@ -30,6 +31,8 @@ require 'pry'
 #
 # Scraper.scrape_title
 # Scraper.scrape_profile_page
+
+
 class Scraper
 
   def get_page
@@ -44,10 +47,10 @@ class Scraper
   def create_countries
     scrape_country_names.each do |country_names|
       # country_names =  names of countries ('scrape_country_names')
-      # binding.pry
-      LeastTravelled.new_from_index_page(country_names)
-      #the programmer is now using a method from the the restaurant.rb file and assigning 'r' (each of the names)
 
+    Country.new_from_index_page(country_names)
+      # binding.pry
+      #the programmer is now using a method from the the restaurant.rb file and assigning 'r' (each of the names)
     end
   end
 end
