@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-require_relative '../lib/CLI_interface.rb'
+require_relative '../lib/least_travelled'
