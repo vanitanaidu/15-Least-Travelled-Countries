@@ -1,4 +1,4 @@
-require_relative '../lib/least_travelled'
+require_relative '../least_travelled'
 
 class Country
 
@@ -6,15 +6,15 @@ class Country
 
   @@all = []
 
-  def self.new_from_index_page(country_names)
+  def self.new_from_main_page(c)
     # r is each name in the scraper class
     binding.pry
-    # self.new(
+     self.new(
     #   r.css("h2").text, #name of the chief
     #   "http://www.theworlds50best.com#{r.css("a").attribute("href").text}", #website of the chef
     #   r.css("h3").text, #name of his restaurant
     #   r.css(".position").text #the position of his restaurant /50. for example no 1 or no 2
-    #   )
+      )
   end
 
   def initialize(name=nil, info=nil, doc=nil)
@@ -35,15 +35,8 @@ class Country
     self.all[id-1]
   end
 
-
-  def doc
-    @doc ||= Nokogiri::HTML(open(self.url))
-  end
+  #
+  # def doc
+  #   @doc ||= Nokogiri::HTML(open(self.url))
+  # end
 end
-
-
-
-LeastTravelled::Scraper.new_from_index_page(country_names)
-country = LeastTravelled::Country.new
-LeastTravelled::Country.all
-LeastTravelled::Country.find(2)

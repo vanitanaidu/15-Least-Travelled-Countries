@@ -1,32 +1,31 @@
-require_relative '../lib/least_travelled'
+require_relative '../least_travelled'
 
 class Scraper
 
   def get_page
-    Nokogiri::HTML(open("http://www.thisisinsider.com/the-least-visited-countries-in-the-world-2015-7?op=1/#-tie-saint-vincent-and-the-grenadines-71000-tourists-4"))
+    Nokogiri::HTML(open("http://www.thisisinsider.com/the-least-visited-countries-in-the-world-2015-7?op=0#25-tie-east-timor-78000-tourists-2"))
   end
 
-  def scrape_country_names
+  def scrape_main_page
     #  names of the least travelled countries; include numbers)
-    self.get_page.css("h3").css(".slide-title")
-   #     self.get_page.css("h3").css(".slide-title").each do |title|
-   #     # new = title.text.slice(/[A-Z]([a-z])+/)
-  end
+    binding.pry
+     self.get_page.css("div.slideshow-content").text
+     self.get_page.css("clearfix")
+    #\32 5-tie-dominica-78000-tourists-1 > h3
+    #\32 5-tie-dominica-78000-tourists-1 > p:nth-child(3) > span > strong
 
-  def create_countries
-    scrape_country_names.each do |country_names|
-      # country_names =  names of countries ('scrape_country_names')
-      # page.css(".slide-module").css("p").css("strong")[0].text #(this give yous: Why so few? Why still visit? What else?)
-     country_names
-    # LeastTravelledCountries::Country.new_from_index_page(country_names)
-       binding.pry
-      #the programmer is now using a method from the the restaurant.rb file and assigning 'r' (each of the names)
+    binding.pry
+   end
+
+
+   def create_countries
+    self.scrape_main_page.each do |c|
+      Country.new_from_main_page(c)
     end
-  end
+   end
 end
-
-scraper = Scraper
-Scraper.new
+#
+scraper = Scraper.new
 scraper.get_page
-scraper.scrape_country_names
+scraper.scrape_main_page
 scraper.create_countries
