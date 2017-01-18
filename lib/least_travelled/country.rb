@@ -2,41 +2,54 @@ require_relative '../least_travelled'
 
 class Country
 
-  attr_accessor :name, :info, :doc
+  attr_accessor :name, :url, :no_of_tourists, :information, :doc
 
   @@all = []
 
   def self.new_from_main_page(c)
-    # r is each name in the scraper class
-    binding.pry
      self.new(
-    #   r.css("h2").text, #name of the chief
-    #   "http://www.theworlds50best.com#{r.css("a").attribute("href").text}", #website of the chef
-    #   r.css("h3").text, #name of his restaurant
-    #   r.css(".position").text #the position of his restaurant /50. for example no 1 or no 2
+       c.css("h3.slide-title").text,
+       "http://www.thisisinsider.com/the-least-visited-countries-in-the-world-2015-7"
       )
+        # #{c.css(".btn.resize href").text}
+        # "http://www.thisisinsider.com/the-least-visited-countries-in-the-world-2015-7#{c.css("a").attribute("href").text}"
+         #name alone no numbers no tourists
   end
 
-  def initialize(name=nil, info=nil, doc=nil)
+  def initialize
     @name = name
-    @info = info
-    @doc = doc
+    @url =  url
     @@all << self
-    # when an instance of country is created every one of this instances will have a name & info
-    # and all these attributes will be pushed into @@all the class variable.
+    # when an instance of country is created every one of the instances will have a name
+    # and it will be pushed into @@all the class variable.
   end
 
   def self.all
     @@all
-    # you can find all the restaurants objects with their attributes attched to them
   end
 
   def self.find(id)
     self.all[id-1]
   end
 
-  #
-  # def doc
-  #   @doc ||= Nokogiri::HTML(open(self.url))
-  # end
+  def no_of_tourists
+    binding.pry
+doc.css("")
+
+  end
+
+  def information
+  end
+
+  def doc
+
+    @doc = Nokogiri::HTML(open(self.url))
+    binding.pry
+
+  end
+
 end
+
+country = Country.new
+country.doc
+# scraper = Scraper.new
