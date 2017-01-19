@@ -20,7 +20,7 @@ class Country
     @@all
   end
 
-  def self.find(id)
+  def self.find(id) #id in my case will be a country so when the user inputs a country  how would you find it in @@all?
     self.all[id-1]
   end
 

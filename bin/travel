@@ -1,2 +1,4 @@
 #!/usr/bin/env ruby
 require_relative '../lib/least_travelled'
+
+CliInterface.new.call

@@ -1,59 +1,57 @@
-# class CLI
-#
-#   def call
-#     Scraper.new.make_restaurants
-#     puts "Welcome to the Least Travelled Countries in the World"
-#     start
-#   end
-#
-#   def start
-#     puts ""
-#     puts "Whaich continent are you interested in? Europe, Asia, South-America, North-America, Africa"
-#     input = gets.strip.downcase
-#
-#     print_restaurants(input)
-#
-#     puts ""
-#     puts "Which country would you like more information on?"
-#     input = gets.strip
-#
-#     country = WorldsBestRestaurants::Restaurant.find(input.to_i)
-#
-#     print_restaurant(country)
-#
-#     puts ""
-#     puts "Would you like to see another country? Enter Y or N"
-#
-#     input = gets.strip.downcase
-#     if input == "y"
-#       start
-#     else
-#       puts ""
-#       puts "Thankyou! Have a great day!"
-#       exit
-#     end
-#   end
-#
-#   def print_restaurant(country)
-#     puts ""
-#     puts "----------- #{country.name} -----------"
-#     puts ""
-#     puts "No. of Tourists every year:           #{restaurant.tourist}"
-#     puts "Information:          #{country.information}"
-#
-#     puts "---------------Description--------------"
-#     puts ""
-#     puts "#{restaurant.description}"
-#     puts ""
-#   end
-#
-#   def print_restaurants(from_number)
-#     puts ""
-#     puts "---------- Restaurants #{from_number} - #{from_number+9} ----------"
-#     puts ""
-#     WorldsBestRestaurants::Restaurant.all[from_number-1, 10].each.with_index(from_number) do |restaurant, index|
-#       puts "#{index}. #{country.name} - #{country.tourists}"
-#     end
-#   end
-#
-# end
+class CliInterface
+
+  def call
+    Scraper.create_countries
+    puts "Hi. Welcome to the Least Travelled Countries in the World"
+    puts "Please look at the following countries and pick one"
+    start
+  end
+
+  def start
+    print_countries
+
+    puts ""
+    puts "Which country would you like more information on? Please key the a number"
+    input = gets.strip.downcase
+
+    country = Country.find(input.to_i)
+
+    print_country(country)
+
+    puts ""
+    puts "Would you like to see another country? Enter Y or N"
+
+    input = gets.strip.downcase
+    if input == "y"
+      start
+    else
+      puts ""
+      puts "Thank you!"
+      exit
+    end
+  end
+
+  def print_country(country)
+    puts ""
+    puts "--------------- #{country.name} ------------------"
+    puts ""
+    puts "Every year #{country.name} gets #{country.tourists}"
+    puts ""
+    puts ""
+
+    puts "------------------#{country.questions} --------------"
+    puts ""
+    puts "#{country.answers}"
+    puts ""
+  end
+
+  def print_countries
+    puts ""
+    puts "---------- Countries ----------"
+    puts ""
+    Country.all.each_with_index do |country, index|
+      puts "#{index + 1}. #{country.name} - #{country.tourists}"
+    end
+  end
+
+end
