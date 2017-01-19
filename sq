@@ -1,0 +1,174 @@
+=> [1;34m#(Element:0x1036384 {[0m
+  name = [31m[1;31m"[0m[31mdiv[1;31m"[0m[31m[0m,
+  attributes = [
+    [1;34m#(Attr:0x11baa0c {[0m name = [31m[1;31m"[0m[31mdata-slide[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m }),
+    [1;34m#(Attr:0x11ba9f8 {[0m
+      name = [31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m,
+      value = [31m[1;31m"[0m[31m25-tie-dominica-78000-tourists-1[1;31m"[0m[31m[0m
+      }),
+    [1;34m#(Attr:0x11ba9e4 {[0m
+      name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m,
+      value = [31m[1;31m"[0m[31mslide-module first-slide clearfix vaop-breakpoint[1;31m"[0m[31m[0m
+      })],
+  children = [
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m                        [1;35m\n[0m[31m                        [1;31m"[0m[31m[0m),
+    [1;34m#(Comment [0m[31m[1;31m"[0m[31m add title if exists [1;31m"[0m[31m[0m),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m                                                    [1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x1033418 {[0m
+      name = [31m[1;31m"[0m[31mh3[1;31m"[0m[31m[0m,
+      attributes = [
+        [1;34m#(Attr:0x11d29b8 {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31mslide-title[1;31m"[0m[31m[0m })],
+      children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31m25. (tie) Dominica: 78,000 tourists[1;31m"[0m[31m[0m)]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m                        [1;35m\n[0m[31m                        [1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x11e09f0 {[0m
+      name = [31m[1;31m"[0m[31mdiv[1;31m"[0m[31m[0m,
+      attributes = [
+        [1;34m#(Attr:0x11e7958 {[0m
+          name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m,
+          value = [31m[1;31m"[0m[31mKonaFilter image-container slide-image-large on-image[1;31m"[0m[31m[0m
+          })],
+      children = [
+        [1;34m#(Element:0x11f78d0 {[0m
+          name = [31m[1;31m"[0m[31mdiv[1;31m"[0m[31m[0m,
+          children = [
+            [1;34m#(Element:0x1205cc8 {[0m
+              name = [31m[1;31m"[0m[31mimg[1;31m"[0m[31m[0m,
+              attributes = [
+                [1;34m#(Attr:0x120bc18 {[0m
+                  name = [31m[1;31m"[0m[31mdata-src[1;31m"[0m[31m[0m,
+                  value = [31m[1;31m"[0m[31mhttp://static1.thisisinsider.com/image/57c6f92bdd0895c9368b477b-1200/25-tie-dominica-78000-tourists.jpg[1;31m"[0m[31m[0m
+                  }),
+                [1;34m#(Attr:0x120bc04 {[0m
+                  name = [31m[1;31m"[0m[31msrc[1;31m"[0m[31m[0m,
+                  value = [31m[1;31m"[0m[31m/assets/images/logos/INS-placeholder.png[1;31m"[0m[31m[0m
+                  }),
+                [1;34m#(Attr:0x120bbf0 {[0m
+                  name = [31m[1;31m"[0m[31malt[1;31m"[0m[31m[0m,
+                  value = [31m[1;31m"[0m[31m25. (tie) Dominica: 78,000 tourists[1;31m"[0m[31m[0m
+                  }),
+                [1;34m#(Attr:0x120bbdc {[0m name = [31m[1;31m"[0m[31mborder[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31m0[1;31m"[0m[31m[0m }),
+                [1;34m#(Attr:0x120bbc8 {[0m
+                  name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m,
+                  value = [31m[1;31m"[0m[31mslide-image-large on-image[1;31m"[0m[31m[0m
+                  })]
+              })]
+          }),
+        [1;34m#(Element:0x12441d0 {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x124696c {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31msource-only[1;31m"[0m[31m[0m })],
+          children = [
+            [1;34m#(Element:0x125b614 {[0m
+              name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+              children = [
+                [1;34m#(Element:0x125d144 {[0m
+                  name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+                  attributes = [
+                    [1;34m#(Attr:0x125febc {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31msource[1;31m"[0m[31m[0m })],
+                  children = [
+                    [1;34m#(Element:0x12876c4 {[0m
+                      name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+                      children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mShutterstock[1;31m"[0m[31m[0m)]
+                      })]
+                  })]
+              })]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x1299400 {[0m
+      name = [31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m,
+      children = [
+        [1;34m#(Element:0x129ab98 {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          children = [
+            [1;34m#(Element:0x130da1c {[0m
+              name = [31m[1;31m"[0m[31mstrong[1;31m"[0m[31m[0m,
+              children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mWhy so few?[1;31m"[0m[31m[0m)]
+              })]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x12ec240 {[0m
+      name = [31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m,
+      children = [
+        [1;34m#(Element:0x12da20c {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          children = [
+            [1;34m#(Text [0m[31m[1;31m"[0m[31mA lack of tourists is one of the reasons why this is my favourite Caribbean country. The two airports here cannot take down anything bigger than commercial propeller aircraft, so most people will have to go to some transit trouble to get there. Unless they have a small private jet, of course.[1;35m\u[0m[31m00A0[1;31m"[0m[31m[0m)]
+          }),
+        [1;34m#(Element:0x12c2e68 {[0m name = [31m[1;31m"[0m[31mbr[1;31m"[0m[31m[0m }),
+        [1;34m#(Element:0x12bec78 {[0m name = [31m[1;31m"[0m[31mbr[1;31m"[0m[31m[0m }),
+        [1;34m#(Element:0x12b9d18 {[0m
+          name = [31m[1;31m"[0m[31mstrong[1;31m"[0m[31m[0m,
+          children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mWhy still visit?[1;31m"[0m[31m[0m)]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x12ab308 {[0m
+      name = [31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m,
+      children = [
+        [1;34m#(Element:0x12a857c {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          children = [
+            [1;34m#(Text [0m[31m[1;31m"[0m[31mYou can't really go wrong visiting a place nicknamed [1;35m\"[0m[31mThe Nature Island of the Caribbean[1;35m\"[0m[31m. The diverse and fantastic flora and fauna are protected by a number of natural parks, all accessible to you. Do also expect volcanic peaks and[1;35m\u[0m[31m00A0[1;31m"[0m[31m[0m)]
+          }),
+        [1;34m#(Element:0x12a0f98 {[0m
+          name = [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x129fea4 {[0m
+              name = [31m[1;31m"[0m[31mhref[1;31m"[0m[31m[0m,
+              value = [31m[1;31m"[0m[31mhttps://en.wikipedia.org/wiki/Boiling_Lake[1;31m"[0m[31m[0m
+              })],
+          children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mBoiling Lake[1;31m"[0m[31m[0m)]
+          }),
+        [1;34m#(Element:0x1294900 {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          children = [
+            [1;34m#(Text [0m[31m[1;31m"[0m[31m. It is the second-largest hot spring in the world, only beaten by[1;35m\u[0m[31m00A0[1;31m"[0m[31m[0m)]
+          }),
+        [1;34m#(Element:0x128ab94 {[0m
+          name = [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x1286a94 {[0m
+              name = [31m[1;31m"[0m[31mhref[1;31m"[0m[31m[0m,
+              value = [31m[1;31m"[0m[31mhttps://en.wikipedia.org/wiki/Frying_Pan_Lake[1;31m"[0m[31m[0m
+              })],
+          children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mFrying Pan Lake[1;31m"[0m[31m[0m)]
+          }),
+        [1;34m#(Element:0x125be98 {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31min New Zealand.[1;31m"[0m[31m[0m)]
+          }),
+        [1;34m#(Element:0x124bfd4 {[0m name = [31m[1;31m"[0m[31mbr[1;31m"[0m[31m[0m }),
+        [1;34m#(Element:0x1247128 {[0m name = [31m[1;31m"[0m[31mbr[1;31m"[0m[31m[0m }),
+        [1;34m#(Element:0x1243dd4 {[0m
+          name = [31m[1;31m"[0m[31mstrong[1;31m"[0m[31m[0m,
+          children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mWhat else?[1;31m"[0m[31m[0m)]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x1238498 {[0m
+      name = [31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m,
+      children = [
+        [1;34m#(Element:0x1227a30 {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          children = [
+            [1;34m#(Text [0m[31m[1;31m"[0m[31mRumours have that the lack of mainstream tourism makes Dominica one of the favourite hot spots for a number of American celebrities. Don't be surprised if Brad Pitt says hi in Pagua Bay Bar & Grill. Then again, you might prefer to meet his wife instead.[1;31m"[0m[31m[0m)]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x1214098 {[0m
+      name = [31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m,
+      children = [
+        [1;34m#(Element:0x120acb4 {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          children = [
+            [1;34m#(Element:0x11f8ab4 {[0m
+              name = [31m[1;31m"[0m[31mem[1;31m"[0m[31m[0m,
+              children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mSource: UNWTO, 2013[1;31m"[0m[31m[0m)]
+              })]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m[1;35m\n[0m[31m                            [1;31m"[0m[31m[0m)]
+  })
