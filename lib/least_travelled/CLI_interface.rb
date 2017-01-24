@@ -3,7 +3,6 @@ class CliInterface
   def call
     Scraper.create_countries
     puts "Hi. Welcome to the Least Travelled Countries in the World"
-    puts "Please look at the following countries and pick one"
     start
   end
 
@@ -11,7 +10,7 @@ class CliInterface
     print_countries
 
     puts ""
-    puts "Which country would you like more information on? Please key the a number"
+    puts "Which country would you like more information on? Please key in any number from 1 - 15"
     input = gets.strip.downcase
 
     country = Country.find(input.to_i)
@@ -29,19 +28,24 @@ class CliInterface
       puts "Thank you!"
       exit
     end
-  end
+   end
 
   def print_country(country)
     puts ""
-    puts "--------------- #{country.name} ------------------"
+    puts "================ #{country.name.upcase} ================="
     puts ""
-    puts "Every year #{country.name} gets #{country.tourists}"
-    puts ""
+    puts "Tourists per year: #{country.tourists}"
     puts ""
 
-    puts "------------------#{country.questions} --------------"
+
+    puts "---------- Why so few? ----------"
     puts ""
-    puts "#{country.answers}"
+    puts "#{country.why_so_few}"
+    puts ""
+    puts "----------- what_else -----------"
+    puts ""
+    puts "#{country.more_info}"
+    puts ""
     puts ""
   end
 
@@ -50,8 +54,10 @@ class CliInterface
     puts "---------- Countries ----------"
     puts ""
     Country.all.each_with_index do |country, index|
-      puts "#{index + 1}. #{country.name} - #{country.tourists}"
+      puts "#{index + 1}. #{country.name}"
+
     end
   end
+
 
 end
