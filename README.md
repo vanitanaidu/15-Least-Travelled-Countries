@@ -6,7 +6,7 @@
 
   ## Installation
 
-      clone the repo from Github
+      Clone the repo from Github
 
 
   ## Usage
