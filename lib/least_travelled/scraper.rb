@@ -16,16 +16,15 @@ class Scraper
 
         name = c.css("h3.slide-title").text.gsub(/\(.*?\)/, "").split(/[.:]/).drop(1).reverse.drop(1).join.strip
         tourists = c.css("h3.slide-title").text.split(" ").last(2).join(" ")
-# binding.pry
-        why_so_few = c.css("p:nth-child(4)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\"]/, " ").gsub(/(Why still visit?)[?]/, " ")
+  # binding.pry
+        why_so_few = c.css("p:nth-child(4)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\]/, " ").gsub(/(Why still visit?)[?]/, " ")
 
-            one = c.css("p:nth-child(5)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\]/, " ").gsub(/(What else)[?]/, " ")
-            two = c.css("p:nth-child(6)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\]/, " ").gsub(/(What else)[?]/, " ")
-            three = c.css("p:nth-child(7)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\]/, " ").gsub(/(What else)[?]/, " ")
-
+            one = c.css("p:nth-child(5)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\]/, " ").gsub(/(What else)[?]/, "").gsub(/(Why still visit?)[?]/, "")
+            two = c.css("p:nth-child(6)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\]/, " ").gsub(/(What else)[?]/, "").gsub(/(Why still visit?)[?]/, "")
+            three = c.css("p:nth-child(7)").text.gsub(/[\u0080-\u00ff]/, " ").gsub(/[\\]/, " ").gsub(/(What else)[?]/, "").gsub(/(Why still visit?)[?]/, "")
         more_info = "#{one} " + "#{two} " + "#{three} "
-          Country.new(name, tourists, why_so_few, more_info)
 
+          Country.new(name, tourists, why_so_few, more_info)
     end
    end
 
