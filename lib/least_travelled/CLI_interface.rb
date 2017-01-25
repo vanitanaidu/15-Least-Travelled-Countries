@@ -42,7 +42,7 @@ class CliInterface
     puts ""
     puts "#{country.why_so_few}"
     puts ""
-    puts "----------- what_else -----------"
+    puts "----------- What else -----------"
     puts ""
     puts "#{country.more_info}"
     puts ""
