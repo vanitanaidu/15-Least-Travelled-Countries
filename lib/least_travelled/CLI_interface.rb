@@ -1,21 +1,29 @@
 class CliInterface
 
   def call
+    puts "loading........"
     Scraper.create_countries
     puts "Hi. Welcome to the Least Travelled Countries in the World"
+    print_countries
     start
   end
 
   def start
-    print_countries
-
     puts ""
     puts "Which country would you like more information on? Please key in any number from 1 - 15"
+
     input = gets.strip.downcase
-
+  
     country = Country.find(input.to_i)
+    
+    if country
+      print_country(country)
+    else
+      puts "Please enter only numbers 1-15"
+      start
+    end
 
-    print_country(country)
+
 
     puts ""
     puts "Would you like to see another country? Enter Y or N"
@@ -53,8 +61,8 @@ class CliInterface
     puts ""
     puts "---------- Countries ----------"
     puts ""
-    Country.all.each_with_index do |country, index|
-      puts "#{index + 1}. #{country.name}"
+    Country.all.each.with_index(1) do |country, index|
+      puts "#{index}. #{country.name}"
 
     end
   end

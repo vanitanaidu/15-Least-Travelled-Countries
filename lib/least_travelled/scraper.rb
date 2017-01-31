@@ -7,7 +7,7 @@ class Scraper
   end
 
   def self.scrape_main_page
-    sleep 3
+    sleep 1
     get_page.css("div.slide-module")
   end
 
