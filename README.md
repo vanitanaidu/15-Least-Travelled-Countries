@@ -15,12 +15,6 @@
 
         $ ruby bin/travel
 
+  ## Blog
 
-  ## Contributing
-
-      Bug reports and pull requests are welcome on GitHub at https://github.com/vanitanaidu/CLI-Data-Gem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
-
-
-  ## License
-
-      The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+    http://vanitanaidueckert.com/2017/01/25/everybody_loves_ruby/
